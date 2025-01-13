@@ -23,7 +23,7 @@ function renderFn(el) {
                 <h2 class="card-title product-title">${element.title}</h2>
                 <p class="card-text product-text">${element.description}</p>
                 <p class="product-price">$${element.price}</p>
-                <a class="btn btn-danger" href="./pages/details.html?id=${element.id}">
+                <a class="btn btn-danger" href="../pages/details.html?product_id=${element.id}">
                   See details.
                 </a>
               </div>
