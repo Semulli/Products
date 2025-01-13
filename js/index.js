@@ -8,8 +8,8 @@ async function getProduct() {
   }
 }
 
-function renderFn(data) {
-  document.querySelector("#productInfo").innerHTML = data
+function renderFn(el) {
+  document.querySelector("#productInfo").innerHTML = el
     .map((element) => {
       return `<div class="col-4">
             <div class="card text-dark m-5" style="width: 300px">
@@ -23,8 +23,8 @@ function renderFn(data) {
                 <h2 class="card-title product-title">${element.title}</h2>
                 <p class="card-text product-text">${element.description}</p>
                 <p class="product-price">$${element.price}</p>
-                <a class="btn btn-danger" href="/pages/details.html?id=${element.id}">
-                  See details..
+                <a class="btn btn-danger" href="./pages/details.html?id=${element.id}">
+                  See details.
                 </a>
               </div>
             </div>
