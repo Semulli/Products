@@ -33,6 +33,5 @@ function renderFn(data) {
     .join(""); 
 }
 
-
 window.addEventListener("load", getProduct);
 
