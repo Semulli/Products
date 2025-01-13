@@ -4,13 +4,13 @@ async function getDetail() {
     const id = new URLSearchParams(window.location.search).get("id"); 
     let res = await fetch(`https://dummyjson.com/products/${id}`);
     let product = await res.json(); 
-    renderFn(product); 
+    renderDetail(product); 
   } catch (error) {
     console.error("An error occurred:", error);
   }
 }
 
-function renderFn(product) {
+function renderDetail(product) {
   document.querySelector("#showDetail").innerHTML = `
     <h1 class="text-center mt-5 text-danger" id="productTitle">${product.title}</h1>
     <div class="d-flex gap-4 mt-5">
